@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Posts</title>
+</head>
+<body>
+	<div id="posts"></div>
+	<a href="/public/form/">Back to form</a>
+	<script type="text/javascript">
+		let posts = document.getElementById('posts')
+		new URLSearchParams(window.location.search).forEach((value,name) => {
+			posts.append(`${name}: ${value}`)
+			posts.append(document.creatElement('br'))
+		})
+	</script>
+</body>
+</html>
